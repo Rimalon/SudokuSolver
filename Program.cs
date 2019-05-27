@@ -282,7 +282,7 @@ namespace SudokuSolverProj
 
         public StringBuilder CreateFileContent()
         {
-            var result = new StringBuilder("p cnf " + Vars.Count + " " + Clauses.Count() + "\n");
+            var result = new StringBuilder("p cnf " + Vars.Max() + " " + Clauses.Count() + "\n");
             foreach (var list in Clauses)
             {
                 foreach (var value in list)
